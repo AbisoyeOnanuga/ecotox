@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-data = pd.read_csv('data/everyday_toxins.csv')
+data = pd.read_csv('data/everyday_toxins_b.csv')
 
 @app.route('/')
 def home():
@@ -41,6 +41,16 @@ def get_pollutants():
 def get_products():
     products = data['Product'].dropna().unique().tolist()
     return jsonify(products)
+
+@app.route('/api/get-data', methods=['GET'])
+def get_data():
+    try:
+        data = pd.read_csv('data/everyday_toxins_b.csv')
+        data_list = data.to_dict(orient='records')
+        return jsonify(data_list)
+    except Exception as e:
+        print(f"Error converting data to JSON: {e}")
+        return jsonify({"error": "Error fetching data"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

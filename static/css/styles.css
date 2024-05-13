@@ -1,7 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,6 +9,8 @@ body {
 
 .container {
     text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 600px; /* Set a maximum width */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -37,6 +38,18 @@ button:hover, #searchButton:hover {
     background-color: #ffabc5; /* Lighter Pastel Pink */
 }
 
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed for spacing */
+}
+
+#logo {
+    max-width: 100px; /* Reduced size, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image is block-level for centering */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
 #results, .result-item {
     text-align: left;
     background-color: #ffefff; /* Very Light Pastel Pink for results, white for items */
@@ -51,4 +64,29 @@ button:hover, #searchButton:hover {
 /* Specific styles for result items */
 .result-item {
     background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ff91af; /* Pastel Pink */
+}
+
+th {
+    background-color: #ff91af; /* Pastel Pink */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #ffefff; /* Very Light Pastel Pink */
+}
+
+tr:hover {
+    background-color: #ffabc5; /* Lighter Pastel Pink */
 }
