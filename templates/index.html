@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pollutants Information</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>EcoTox Everyday Pollutants Search</h1>
-        <select id="productSelect">
-            <option value="">Select a product</option>
-        </select>
-        <button id="searchButton">Search</button>
-        <div id="results"></div>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pollutants Information</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/EcoTox-logo.png') }}" alt="Ecotox Logo" id="logo">
+        </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
+        <div class="container">
+            <h1>EcoTox Everyday Pollutants Search</h1>
+            <select id="productSelect">
+                <option value="">Select a product</option>
+            </select>
+            <button id="searchButton">Search</button>
+            <div id="results"></div>
+        </div>
+
+        <!-- Data Table Section -->
+        <div class="data-table-container">
+            <table id="data-table">
+                <!-- Table Headers -->
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Toxic Chemical Ingredients/ By-products</th>
+                        <th>Environmental/Health Effects</th>
+                        <th>Air</th>
+                        <th>Water</th>
+                        <th>Land/Soil</th>
+                    </tr>
+                </thead>
+                <!-- Table Body -->
+                <tbody>
+                    <!-- Data rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
 </html>
