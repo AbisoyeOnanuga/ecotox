@@ -26,7 +26,7 @@ A JSON array of objects, each containing detailed information about a pollutant.
 `GET /pollutants?product=paint`
 
 **Example Response:**
-```json
+```json```
 [
   {
     "Product": "Paint Removers or Strippers",
@@ -37,3 +37,19 @@ A JSON array of objects, each containing detailed information about a pollutant.
     "Pollutes Land/Soil": "Yes"
   }
 ]
+
+```Note: The values for “Pollutes Air,” “Pollutes Water,” and “Pollutes Land/Soil” are returned as “Yes” or “No” based on whether the product has an impact on that ecological environment.```
+
+## Testing the API
+You can test the Ecotox API directly in your web browser or using a command-line tool like ```curl.```
+
+## Browser Testing
+Enter the API endpoint URL in your browser’s address bar. For example:
+
+```http://your-api-url.com/pollutants?product=paint```
+
+
+## Terminal Testing
+Use ```curl``` to send a GET request from your terminal:
+
+```curl "http://your-api-url.com/pollutants?product=paint"```
