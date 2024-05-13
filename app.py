@@ -45,12 +45,21 @@ def get_products():
 @app.route('/api/get-data', methods=['GET'])
 def get_data():
     try:
+        # Read the CSV file
         data = pd.read_csv('data/everyday_toxins_b.csv')
+        
+        # Convert 1s and 0s to 'Yes' and 'No' for the specified columns
+        bool_columns = ['Air', 'Water', 'Land/Soil']
+        for col in bool_columns:
+            data[col] = data[col].map({1: 'Yes', 0: 'No'})
+        
+        # Convert the DataFrame to a list of dictionaries for the JSON response
         data_list = data.to_dict(orient='records')
         return jsonify(data_list)
     except Exception as e:
         print(f"Error converting data to JSON: {e}")
         return jsonify({"error": "Error fetching data"}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)

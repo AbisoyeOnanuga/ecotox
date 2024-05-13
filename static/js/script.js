@@ -75,19 +75,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Create a table row element
                 const row = document.createElement('tr');
 
-                // Convert boolean values to 'Yes' or 'No'
-                const airValue = item['Pollutes Air'] === "Yes" ? 'Yes' : 'No';
-                const waterValue = item['Pollutes Water'] === "Yes" ? 'Yes' : 'No';
-                const landSoilValue = item['Pollutes Land/Soil'] === "Yes" ? 'Yes' : 'No';
-
                 // Set the innerHTML of the row with the data
                 row.innerHTML = `
                     <td>${item.Product}</td>
                     <td>${item['Toxic Chemical Ingredients/ By-products']}</td>
                     <td>${item['Environmental/Health Effects']}</td>
-                    <td>${airValue}</td>
-                    <td>${waterValue}</td>
-                    <td>${landSoilValue}</td>
+                    <td>${item.Air}</td>
+                    <td>${item.Water}</td>
+                    <td>${item['Land/Soil']}</td>
                 `;
 
                 // Append the row to the table body
