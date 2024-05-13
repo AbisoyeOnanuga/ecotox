@@ -1,0 +1,54 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #ff91af; /* Pastel Pink */
+}
+
+select, button, #productSelect, #searchButton {
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px; /* Adjusted to match the specific width of select and button */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ff91af; /* Pastel Pink */
+    color: white;
+    cursor: pointer; /* Added for consistency */
+}
+
+button:hover, #searchButton:hover {
+    background-color: #ffabc5; /* Lighter Pastel Pink */
+}
+
+#results, .result-item {
+    text-align: left;
+    background-color: #ffefff; /* Very Light Pastel Pink for results, white for items */
+    border: 1px solid #ff91af; /* Pastel Pink */
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px; /* Only for results */
+    margin-bottom: 10px; /* Only for result items */
+    font-family: 'Courier New', monospace; /* Only for result items */
+}
+
+/* Specific styles for result items */
+.result-item {
+    background-color: white;
+}
