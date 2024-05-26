@@ -46,7 +46,7 @@ def get_products():
 def get_data():
     try:
         # Read the CSV file
-        data = pd.read_csv('data/everyday_toxins_b.csv')
+        data = pd.read_csv('data/everyday_toxins.csv')
         
         # Convert 1s and 0s to 'Yes' and 'No' for the specified columns
         bool_columns = ['Air', 'Water', 'Land/Soil']

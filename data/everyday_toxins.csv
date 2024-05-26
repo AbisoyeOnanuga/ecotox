@@ -14,7 +14,7 @@ Carburetor or Fuel-Injection Air Intake Cleaners,"Prohibited substances in Calif
 General Purpose Degreasers - Non-Aerosols,VOCs,"Can lead to headaches, dizziness, and respiratory issues",1,0,0
 Automotive Undercoatings - Aerosols,"Methanol, Toluene, Ethylbenzene",may contain harmful chemicals if not used as directed,1,0,0
 Other Adhesives,"Methylene chloride, Styrene, N-methyl-2-pyrrolidone, Formaldehyde, Oumene, Naphthalene, Benzene",May contain harmful chemicals similar to those in construction adhesives; proper use and ventilation required.,1,1,1
-Tire Sealants and Inflators,Ethylene glycol,May contain chemicals that can be harmful if inhaled or come into contact with skin,,,
+Tire Sealants and Inflators,Ethylene glycol,May contain chemicals that can be harmful if inhaled or come into contact with skin,0,1,0
 Automotive Windshield Washer Fluids - Non Type A,Methanol,can be toxic if ingested,1,1,1
 Contact Adhesive - Special Purpose,"Methanol, Toluene, Hexane",May contain VOCs and other chemicals that require proper handling and ventilation,1,1,1
 Miscl. Office and Art Supplies,"N-methyl-2-pyrrolidone, Diethanolamine, Oumene, Ethylene glycol, Toluene, ethylbenzene, Hexane, dibutyl phthalate, N,N-dimethyl-p-toluidine, Isopropenylbenzene","Toluene may end up in surface water or groundwater, DEA can contaminate surface water and groundwater, NPM can contaminate soil and water through spills or improper disposal",1,1,1
@@ -24,7 +24,7 @@ General Purpose Cleaners - Non-Aerosols,Acetone,Neurotoxin and may cause liver a
 Graffiti Remover - Aerosol,solvents,Hazardous and not always effective due to the insolubility of graffiti paint,1,1,1
 Silicone Based Multi-Purpose Lubricant,Pertroleum distillates,Can be fatal if swallowed and enters airways,1,1,1
 Other Insecticides and Repellents,"DEET, DMP, Allethrin",Can lead to environmental/Health risks with higher exposure,1,1,1
-Glass Cleaners - Non-Aerosols,"2-Hexoxyethanol, Ammonium hydroxide",,1,1,1
+Glass Cleaners - Non-Aerosols,"2-Hexoxyethanol, Ammonium hydroxide","2-Hexoxyethanol: Degradable in water, minimal soil impact, harmful if swallowed or in contact with skin.Ammonium Hydroxide: Water contaminant if improperly disposed, corrosive, can cause burns and respiratory issues.",1,1,1
 Other Cleaners/Degreasers/Solvents,Trichloroethylene (TCE),"Used for metal degreasing, posing human health hazards",1,1,1
 Wood Floor Wax/Polish,Per- and Polyfluoroalkyl Substances (PFAS),Can cause liver and kidney damage and other health risks,1,1,1
 Electrical Cleaner,"n-Propyl Bromide (nPB), Trichloroethylene (TCE), and Perchloroethylene (Perc)",Highly toxic and can cause major health effects,1,1,1
@@ -43,64 +43,3 @@ Laundry Detergent,"Phosphates, surfactants, phthalates, 1,4-dioxane","Damage aqu
 Oven Cleaners - Aerosols,"Aerosols, VOCs, CFCs","Air quality issues, respiratory problems, damage to ozone layer",1,1,1
 General Purpose Degreasers - Aerosols,"Volatile Organic Compounds (VOCs), Trichloroethylene (TCE), Perchloroethylene (Perc)","Air pollution, respiratory problems, environmental hazards, regulatory concerns",1,1,1
 Adhesive Removers - Gasket or Thread Locking,"Triethylene glycol dimethacrylate, Benzisothiazol-3(2H)-one","Amorphous fumed silica,Skin and eye irritation, respiratory irritation, potential health hazards",0,1,1
-Disinfectants,,,,,
-General Purpose Adhesive,,,,,
-Penetrant,,,,,
-Hand Dishwashing Soap,,,,,
-Floor Maintenance Product,,,,,
-Various Pet Care Products,,,,,
-Bug and Tar Removers,,,,,
-Motor Vehicle Wash,,,,,
-Adhesive Removers - Specialty,,,,,
-Adhesive Removers - General Purpose,,,,,
-Footwear or Leather Care Product - Aerosol,,,,,
-Floor Wax Strippers,,,,,
-Rubber and Vinyl Protectants - Non-Aerosols,,,,,
-Hand and Body Lotions,,,,,
-Other Misc. Household Products,,,,,
-Other Personal Care Products,,,,,
-Various Garden and Lawn Care Products,,,,,
-Footwear or Leather Care Product - All Other Forms,,,,,
-Wood Cleaner - Non-Aerosol,,,,,
-Furniture Maintenance Products - Other Forms,,,,,
-Crawling Bug Insecticides - Aerosols,,,,,
-Metal Polishes/Cleansers,,,,,
-Hair Care Product - Shampoo,,,,,
-Brush Cleaner,,,,,
-Graffiti Remover - Non-Aerosol,,,,,
-Carpet and Upholstery Cleaners - Non-Aerosols,,,,,
-Engine Degreasers - Aerosols,,,,,
-Insulating and Sealing Foam,,,,,
-Glass Cleaners - Aerosols,,,,,
-Hand Sanitizer,,,,,
-Automotive Waxes/Polishes/Sealants/Glazes,,,,,
-Dusting Aids - Non-Aerosols,,,,,
-Various Oral Care Products,,,,,
-Spot Removers - Non-Aerosols,,,,,
-Oven Cleaners - Non-Aerosols,,,,,
-Other Hair Care Products,,,,,
-Automotive Rubbing or Polishing Compounds,,,,,
-Witch Hazel,,,,,
-Toilet/Urinal Care Product (Non-Para),,,,,
-Bathroom and Tile Cleaners - Non-Aerosols,,,,,
-Various Nail Care Products,,,,,
-Personal Hygiene Products,,,,,
-Heavy Duty Hand Cleaner or Soap,,,,,
-Automotive Instant Detailers,,,,,
-Hair Styling Product - All Other Forms,,,,,
-Liquid/Pump Spray Air Fresheners,,,,,
-Various Make-Up Cosmetics,,,,,
-Fabric Protectants - Aerosol,,,,,
-Hair Care Product - Conditioner,,,,,
-Various Dishwashing Products,,,,,
-Wood Cleaner - Aerosol,,,,,
-Other Odor Remover/Eliminator Products,,,,,
-Lawn and Garden Insecticides,,,,,
-Flying Insect Insecticide - Aerosols,,,,,
-External Analgesic Product,,,,,
-Footwear or Leather Care Product - Solid,,,,,
-Furniture Maintenance Products - Aerosols,,,,,
-Wasp and Hornet Insecticide,,,,,
-Adhesive Removers - Floor and Wall Covering,,,,,
-Rubber and Vinyl Protectants - Aerosols,,,,,
-Shaving Gels,,,,,
