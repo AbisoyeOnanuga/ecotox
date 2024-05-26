@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-data = pd.read_csv('data/everyday_toxins_b.csv')
+data = pd.read_csv('data/everyday_toxins.csv')
 
 @app.route('/')
 def home():
