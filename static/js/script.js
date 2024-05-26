@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Fetch and populate item options
+    // Fetch and populate item options for the dropdown
     fetch('/products')
         .then(response => response.json())
         .then(items => {
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
+// Event listener for the search button
 document.getElementById('searchButton').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
     const product = document.getElementById('productSelect').value;
@@ -39,25 +40,30 @@ document.getElementById('searchButton').addEventListener('click', function(event
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Fetch all pollutants to populate the table
+    // Fetch all items to populate the table
     fetch('/pollutants')
         .then(response => response.json())
         .then(data => {
-            const tableBody = document.querySelector('#data-table tbody');
-            tableBody.innerHTML = ''; // Clear existing rows
-            data.forEach(item => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${item.Item}</td>
-                    <td>${item['Toxic Pollutant']}</td>
-                    <td>${item['Embodied Carbon (kg CO2e)']}</td>
-                    <td>${item['Emitted Carbon (kg CO2e)']}</td>
-                    <td>${item['Disposal Point']}</td>
-                    <td>${item['Health Impact']}</td>
-                    <td>${item['How to recycle']}</td>
-                `;
-                tableBody.appendChild(row);
-            });
+            populateTable(data); // Call the function to populate the table with fetched data
         })
         .catch(error => console.error('Error:', error));
 });
+
+// Function to populate the table with fetched data
+function populateTable(data) {
+    const tableBody = document.getElementById('data-table').querySelector('tbody');
+    tableBody.innerHTML = ''; // Clear existing rows
+    data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${item.Item}</td>
+            <td>${item['Toxic Pollutant']}</td>
+            <td>${item['Embodied Carbon (kg CO2e)']}</td>
+            <td>${item['Emitted Carbon (kg CO2e)']}</td>
+            <td>${item['Disposal Point']}</td>
+            <td>${item['Health Impact']}</td>
+            <td>${item['How to recycle']}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+}

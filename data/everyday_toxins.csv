@@ -23,13 +23,13 @@ Flea Collar,Tetrachlorvinphos,0.05,0.01,Household Hazardous Waste,Neurotoxin,Rec
 Car Air Fresheners,Phthalates,0.1,0.02,Landfill,Respiratory issues,Take used oil to automotive stores or recycling centers
 Motor Oil,Polycyclic Aromatic Hydrocarbons (PAHs),1,0.2,Recycling,Linked to cancer,Take to automotive stores or hazardous waste collection
 Antifreeze,Ethylene Glycol,0.3,0.07,Recycling,Kidney damage,Take to automotive stores or hazardous waste collection
-Brake Fluid,"Heavy Metals (Lead,  Cadmium)",0.2,0.05,Household Hazardous Waste,Neurotoxicity,NA
-Car Wax,Petroleum Distillates,0.3,0.07,Landfill,Respiratory problems,NA
+Brake Fluid,"Heavy Metals (Lead,  Cadmium)",0.2,0.05,Household Hazardous Waste,Neurotoxicity,"coming soon ..."
+Car Wax,Petroleum Distillates,0.3,0.07,Landfill,Respiratory problems,"coming soon ..."
 Tire Shine,Polycyclic Aromatic Hydrocarbons (PAHs),0.2,0.05,Recycling,Potential carcinogen,Tire shine products are not typically recyclable due to their chemical composition. It is best to use up the product completely and dispose of the container in the regular trash
 Windshield Washer Fluid,Methanol,0.1,0.03,Recycling,Neurological effects,Recycle at automotive stores or recycling centers
-Fuel Additives,MTBE (Methyl Tertiary Butyl Ether),0.1,0.03,Incineration,Groundwater contamination,NA
+Fuel Additives,MTBE (Methyl Tertiary Butyl Ether),0.1,0.03,Incineration,Groundwater contamination,"coming soon ..."
 Car Batteries,Lead-Acid,5,1,Recycling,Lead exposure,Recyclable if container is empty and clean
-Exhaust Emissions,Nitrogen Oxides (NOx),NA,NA,Atmosphere,Respiratory problems,"Not recyclable, dispose of in regular trash"
+Exhaust Emissions,Nitrogen Oxides (NOx),"coming soon ...","coming soon ...",Atmosphere,Respiratory problems,"Not recyclable, dispose of in regular trash"
 Deodorant,Aluminum Compounds,0.1,0.02,Landfill,Hormone disruption,Recyclable plastic containers if empty and clean
 Lipstick,Lead,0.05,0.01,Household Hazardous Waste,Neurotoxicity,Recyclable plastic containers if empty and clean
 Sunscreen,Oxybenzone,0.2,0.04,Sewage Treatment,Endocrine disruption,Recyclable plastic containers if empty and clean
@@ -46,6 +46,6 @@ Toothpaste,Triclosan,0.15,0.03,Sewage Treatment,Endocrine disruption,Plastic mou
 Deodorant,Aluminum Compounds,0.1,0.02,Landfill,Respiratory irritation,Plastic facial cleanser containers can be recycled if they are empty and clean. Check with local recycling programs or use mail-in recycling services
 Conditioner,Silicones,0.1,0.02,Sewage Treatment,Non-biodegradable,Plastic body wash bottles can be recycled with plastic recycling if they are empty and clean. Check with local recycling guidelines
 Mouthwash,Chlorhexidine,0.15,0.03,Sewage Treatment,Can cause staining of teeth,Glass aftershave bottles can be recycled with glass recycling. Plastic aftershave containers can be recycled with plastic recycling if they are empty and clean
-Facial Cleanser,Triclosan,0.2,0.04,Sewage Treatment,Endocrine disruption,"Not recyclable,  dispose of in regular trash if container is empty"
-Body Wash,Sodium Laureth Sulfate,0.1,0.02,Sewage Treatment,Irritation to skin and eyes,"Not recyclable,  dispose of in regular trash if container is empty"
-Aftershave,Isopropyl Alcohol,0.05,0.01,Household Hazardous Waste,Skin and eye irritation,"Not recyclable,  dispose of in regular trash if container is empty"
+Facial Cleanser,Triclosan,0.2,0.04,Sewage Treatment,Endocrine disruption,"coming soon ..."
+Body Wash,Sodium Laureth Sulfate,0.1,0.02,Sewage Treatment,Irritation to skin and eyes,"coming soon ..."
+Aftershave,Isopropyl Alcohol,0.05,0.01,Household Hazardous Waste,Skin and eye irritation,"coming soon ..."
