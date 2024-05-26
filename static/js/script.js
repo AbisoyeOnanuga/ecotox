@@ -1,34 +1,36 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Fetch and populate item options
     fetch('/products')
         .then(response => response.json())
-        .then(products => {
-            var select = document.getElementById('productSelect');
-            products.forEach(function(product) {
-                var option = document.createElement('option');
-                option.value = product;
-                option.textContent = product;
-                select.appendChild(option);
+        .then(items => {
+            const select = document.getElementById('productSelect');
+            select.innerHTML = '<option value="">Select an item</option>'; // Reset dropdown
+            items.forEach(item => {
+                const option = new Option(item, item);
+                select.add(option);
             });
         });
 });
 
-document.getElementById('searchButton').addEventListener('click', function() {
-    var product = document.getElementById('productSelect').value;
-    fetch('/pollutants?product=' + encodeURIComponent(product))
+document.getElementById('searchButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+    const product = document.getElementById('productSelect').value;
+    fetch(`/pollutants?product=${encodeURIComponent(product)}`)
         .then(response => response.json())
         .then(data => {
-            var resultsContainer = document.getElementById('results');
+            const resultsContainer = document.getElementById('results');
             resultsContainer.innerHTML = ''; // Clear previous results
-            data.forEach(function(item) {
-                var div = document.createElement('div');
+            data.forEach(item => {
+                const div = document.createElement('div');
                 div.className = 'result-item';
                 div.innerHTML = `
-                    <strong>Product:</strong> ${item.Product}<br>
-                    <strong>Toxic Chemical Ingredients/ By-products:</strong> ${item['Toxic Chemical Ingredients/ By-products']}<br>
-                    <strong>Environmental/Health Effects:</strong> ${item['Environmental/Health Effects']}<br>
-                    <strong>Pollutes Air:</strong> ${item['Pollutes Air']}<br>
-                    <strong>Pollutes Water:</strong> ${item['Pollutes Water']}<br>
-                    <strong>Pollutes Land/Soil:</strong> ${item['Pollutes Land/Soil']}
+                    <strong>Item:</strong> ${item.Item}<br>
+                    <strong>Toxic Pollutant:</strong> ${item['Toxic Pollutant']}<br>
+                    <strong>Embodied Carbon (kg CO2e):</strong> ${item['Embodied Carbon (kg CO2e)']}<br>
+                    <strong>Emitted Carbon (kg CO2e):</strong> ${item['Emitted Carbon (kg CO2e)']}<br>
+                    <strong>Disposal Point:</strong> ${item['Disposal Point']}<br>
+                    <strong>Health Impact:</strong> ${item['Health Impact']}<br>
+                    <strong>How to recycle:</strong> ${item['How to recycle']}
                 `;
                 resultsContainer.appendChild(div);
             });
@@ -36,61 +38,26 @@ document.getElementById('searchButton').addEventListener('click', function() {
         .catch(error => console.error('Error:', error));
 });
 
-function searchProducts() {
-    var product = document.getElementById('productSelect').value;
-    fetch('/pollutants?product=' + encodeURIComponent(product))
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch all pollutants to populate the table
+    fetch('/pollutants')
         .then(response => response.json())
         .then(data => {
-            var resultsContainer = document.getElementById('results');
-            resultsContainer.innerHTML = ''; // Clear previous results
-            data.forEach(function(item) {
-                var div = document.createElement('div');
-                div.className = 'result-item';
-                div.innerHTML = `
-                    <strong>Product:</strong> ${item.Product}<br>
-                    <strong>Toxic Chemical Ingredients/ By-products:</strong> ${item['Toxic Chemical Ingredients/ By-products']}<br>
-                    <strong>Environmental/Health Effects:</strong> ${item['Environmental/Health Effects']}<br>
-                    <strong>Pollutes Air:</strong> ${item['Pollutes Air']}<br>
-                    <strong>Pollutes Water:</strong> ${item['Pollutes Water']}<br>
-                    <strong>Pollutes Land/Soil:</strong> ${item['Pollutes Land/Soil']}
-                `;
-                resultsContainer.appendChild(div);
-            });
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-// Fetch data from your backend API
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('/api/get-data')
-        .then(response => response.json()) // Parse the JSON response
-        .then(data => {
             const tableBody = document.querySelector('#data-table tbody');
-
-            // Clear any existing rows
-            tableBody.innerHTML = '';
-
-            // Iterate through the data and create table rows
+            tableBody.innerHTML = ''; // Clear existing rows
             data.forEach(item => {
-                // Create a table row element
                 const row = document.createElement('tr');
-
-                // Set the innerHTML of the row with the data
                 row.innerHTML = `
-                    <td>${item.Product}</td>
-                    <td>${item['Toxic Chemical Ingredients/ By-products']}</td>
-                    <td>${item['Environmental/Health Effects']}</td>
-                    <td>${item.Air}</td>
-                    <td>${item.Water}</td>
-                    <td>${item['Land/Soil']}</td>
+                    <td>${item.Item}</td>
+                    <td>${item['Toxic Pollutant']}</td>
+                    <td>${item['Embodied Carbon (kg CO2e)']}</td>
+                    <td>${item['Emitted Carbon (kg CO2e)']}</td>
+                    <td>${item['Disposal Point']}</td>
+                    <td>${item['Health Impact']}</td>
+                    <td>${item['How to recycle']}</td>
                 `;
-
-                // Append the row to the table body
                 tableBody.appendChild(row);
             });
         })
-        .catch(error => {
-            console.error('Error fetching data:', error);
-            // Optionally, handle the error in the UI as well
-        });
+        .catch(error => console.error('Error:', error));
 });
